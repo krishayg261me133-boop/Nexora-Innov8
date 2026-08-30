@@ -1,0 +1,159 @@
+{
+  "studentId": "S001",
+  "name": "Nishita Shankar",
+  "department": "Computer Science",
+  "year": "3rd Year",
+  "headline": "Full-Stack Dev looking for ambitious hackathon teammates",
+  "skills": [Python, JavaScript, React, Node.js, SQL, Git],
+  "interests": [Cloud Computing, Web3, Open Source],
+  "availability": "Unavailable",
+  "experience": "Software Engineering Intern at TechCorp (6 mos)",
+  "certifications": [AWS Certified Developer],
+  "achievements": [Hackathon Winner (CodeSprint 2025)],
+  "preferredRole": "Backend Lead / Developer",
+  "projectsCompleted": 3
+}
+
+{
+  "studentId": "S002",
+  "name": "Behura Kavyanjali",
+  "department": "Data Science",
+  "year": "2nd Year",
+  "headline": "AI/ML enthusiast eager to join research labs & data hackathons",
+  "skills": [Python, Pandas, Scikit-Learn, PyTorch, SQL],
+  "interests": [Machine Learning, NLP, Data Storytelling],
+  "availability": "Available",
+  "experience": "Data Analyst Intern at InsightLabs (3 mos)",
+  "certifications": [Google Data Analytics Certificate],
+  "achievements": [Published research paper in student journal],
+  "preferredRole": "ML Researcher / Model Builder",
+  "projectsCompleted": 1
+}
+
+{
+  "studentId": "S003",
+  "name": "Saloni Bhanwar",
+  "department": "Information Technology",
+  "year": "3rd Year",
+  "headline": "Cybersecurity geek wanting to form a CTF hackathon team",
+  "skills": [Linux, Wireshark, Python, Bash, Network Security],
+  "interests": [Information Security, Threat Intelligence],
+  "availability": "Hybrid",
+  "experience": "IT Support Specialist (Campus Helpdesk)",
+  "certifications": [CompTIA Security+, Cisco CCNA],
+  "achievements": [Capture The Flag (CTF) National Finalist 2025],
+  "preferredRole": "Security Specialist / Strategist",
+  "projectsCompleted": 3
+}
+
+{
+  "studentId": "S004",
+  "name": "Rishabh Nagvekar",
+  "department": "Artificial Intelligence",
+  "year": "2nd Year",
+  "headline": "Passionate about generative AI and collaborative coding projects",
+  "skills": [Python, TensorFlow, PyTorch, NLTK, OpenCV],
+  "interests": [Natural Language Processing, Generative AI, Robotics],
+  "availability": "Available",
+  "experience": "AI Research Assistant (University Lab)",
+  "certifications": [Deep Learning Specialization (Coursera)],
+  "achievements": [Best Innovation Award at AI Hackfest],
+  "preferredRole": "AI Engineer / Prompt Architect",
+  "projectsCompleted": 1
+}
+
+{
+  "studentId": "S005",
+  "name": "Krishay G",
+  "department": "Electronics and communication",
+  "year": "3",
+  "headline": "Embedded systems builder looking for robotics and IoT project partners",
+  "skills": [C, C++, Arduino, RTOS, Verilog, PCB Design],
+  "interests": [IoT, Robotics, Edge AI, Hardware prototyping],
+  "availability": "Available",
+  "experience": "Hardware Intern at MicroSystems (6 mos)",
+  "certifications": [ARM Accredited Engineer],
+  "achievements": [Robotics Club President, 1st Place Smart India Hackathon],
+  "preferredRole": "Hardware Architect / Firmware Dev",
+  "projectsCompleted": 4
+}
+
+{
+  "studentId": "S006",
+  "name": "Nishita Lumini",
+  "department": "Computer Science",
+  "year": "2nd Year",
+  "headline": "UI/UX Designer looking to collaborate on hackathons and startup MVPs",
+  "skills": [Figma, HTML/CSS, JavaScript, React, Tailwind CSS],
+  "interests": [Human-Computer Interaction, Design Systems, App Design],
+  "availability": "Hybrid",
+  "experience": "Freelance UI/UX Designer (1 year)",
+  "certifications": [Google UX Design Professional Certificate],
+  "achievements": [Design Hackathon Winner 2024],
+  "preferredRole": "UI/UX Designer / Frontend Dev",
+  "projectsCompleted": 1
+}
+
+{
+  "studentId": "S007",
+  "name": "Ram Sen",
+  "department": "Data Science",
+  "year": "3rd Year",
+  "headline": "Big data wizard seeking research groups in scalable analytics",
+  "skills": [Python, Spark, Hadoop, SQL, Airflow, Docker],
+  "interests": [Data Engineering, Distributed Computing, ETL Pipelines],
+  "availability": "Available",
+  "experience": "Data Engineering Intern at DataScale (4 mos)",
+  "certifications": [Databricks Certified Associate Developer],
+  "achievements": [ACM ICPC Regional Finalist],
+  "preferredRole": "Data Architect / Pipeline Engineer",
+  "projectsCompleted": 2
+}
+
+{
+  "studentId": "S008",
+  "name": "Priya Joshi",
+  "department": "Information Technology",
+  "year": "1st year",
+  "headline": "Cloud & DevOps enthusiast wanting to build infrastructure for college tech clubs",
+  "skills": [Docker, Kubernetes, AWS, Terraform, Linux],
+  "interests": [DevOps, Infrastructure as Code, Cloud Architecture],
+  "availability": "Available",
+  "experience": "IT Club Technical Lead",
+  "certifications": [AWS Certified Cloud Practitioner],
+  "achievements": [Winner of Cloud Innovate Challenge],
+  "preferredRole": "DevOps / Systems Lead",
+  "projectsCompleted": 0
+}
+
+{
+  "studentId": "S009",
+  "name": "Arjun Das",
+  "department": "Computer Science",
+  "year": "2nd Year",
+  "headline": "Mobile app creator looking for teammates for upcoming app-building hackathons",
+  "skills": [Flutter, Dart, Kotlin, Firebase, REST APIs],
+  "interests": [Cross-platform Apps, Mobile UI, AR/VR],
+  "availability": "Hybrid",
+  "experience": "App Developer for Student Startup",
+  "certifications": [Flutter & Dart Certification],
+  "achievements": [App of the Month Award (Campus Tech Week)],
+  "preferredRole": "Mobile App Lead",
+  "projectsCompleted": 1
+}
+
+{
+  "studentId": "S010",
+  "name": "Tanvi Kulkarni",
+  "department": "Artificial Intelligence",
+  "year": "4th Year",
+  "headline": "Computer vision researcher looking for academic project collaborators",
+  "skills": [Python, OpenCV, PyTorch, C++, TensorRT],
+  "interests": [Computer Vision, Deep Learning, Edge Computing],
+  "availability": "Unavailable",
+  "experience": "CV Research Intern (AI Research Center)",
+  "certifications": [NVIDIA Deep Learning Institute Certificate],
+  "achievements": [Published paper at IEEE Student Conference],
+  "preferredRole": "Lead Researcher",
+  "projectsCompleted": 4
+}
