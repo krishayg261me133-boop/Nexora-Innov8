@@ -1,0 +1,221 @@
+import { Achievement, Certification, Experience, Profile } from '@/lib/types';
+
+export interface SampleStudent extends Profile {
+  skills: string[];
+  interests: string[];
+  preferred_role: string;
+  experiences: Experience[];
+  certifications: Certification[];
+  achievements: Achievement[];
+}
+
+function avatarUrl(name: string) {
+  return `https://api.dicebear.com/9.x/lorelei/svg?seed=${encodeURIComponent(name)}&backgroundColor=c7d2fe,a5f3fc,99f6e4`;
+}
+
+function base(partial: Omit<SampleStudent, 'email' | 'program' | 'about' | 'onboarding_complete' | 'created_at' | 'updated_at' | 'experiences' | 'certifications' | 'achievements'> & {
+  experience: string;
+  certifications: string[];
+  achievements: string[];
+}): SampleStudent {
+  const id = partial.id;
+  return {
+    ...partial,
+    email: `${partial.full_name.toLowerCase().replace(/\s+/g, '.')}@campus.nexora`,
+    program: partial.department,
+    about: partial.bio,
+    avatar_url: avatarUrl(partial.full_name),
+    onboarding_complete: true,
+    created_at: '2025-08-01T10:00:00.000Z',
+    updated_at: '2026-08-15T10:00:00.000Z',
+    experiences: [{
+      id: `${id}-exp`,
+      profile_id: id,
+      title: partial.experience,
+      organization: 'Campus / Industry',
+      description: '',
+      start_date: '',
+      end_date: '',
+    }],
+    certifications: partial.certifications.map((title, i) => ({
+      id: `${id}-cert-${i}`,
+      profile_id: id,
+      title,
+      issuer: 'Certification body',
+      date: '2025',
+    })),
+    achievements: partial.achievements.map((title, i) => ({
+      id: `${id}-ach-${i}`,
+      profile_id: id,
+      title,
+      description: '',
+      date: '2025',
+    })),
+  };
+}
+
+export const SAMPLE_STUDENTS: SampleStudent[] = [
+  base({
+    id: 'sample-S001',
+    full_name: 'Nishita Shankar',
+    department: 'Computer Science',
+    academic_year: '3rd Year',
+    bio: 'Full-Stack Dev looking for ambitious hackathon teammates',
+    skills: ['Python', 'JavaScript', 'React', 'Node.js', 'SQL', 'Git'],
+    interests: ['Cloud Computing', 'Web3', 'Open Source'],
+    availability_status: 'Not available',
+    experience_level: 'Intermediate',
+    completed_projects: 3,
+    preferred_role: 'Backend Lead / Developer',
+    experience: 'Software Engineering Intern at TechCorp (6 mos)',
+    certifications: ['AWS Certified Developer'],
+    achievements: ['Hackathon Winner (CodeSprint 2025)'],
+  }),
+  base({
+    id: 'sample-S002',
+    full_name: 'Behura Kavyanjali',
+    department: 'Data Science',
+    academic_year: '2nd Year',
+    bio: 'AI/ML enthusiast eager to join research labs & data hackathons',
+    skills: ['Python', 'Pandas', 'Scikit-Learn', 'PyTorch', 'SQL'],
+    interests: ['Machine Learning', 'NLP', 'Data Storytelling'],
+    availability_status: 'Open to collaborate',
+    experience_level: 'Intermediate',
+    completed_projects: 1,
+    preferred_role: 'ML Researcher / Model Builder',
+    experience: 'Data Analyst Intern at InsightLabs (3 mos)',
+    certifications: ['Google Data Analytics Certificate'],
+    achievements: ['Published research paper in student journal'],
+  }),
+  base({
+    id: 'sample-S003',
+    full_name: 'Saloni Bhanwar',
+    department: 'Information Technology',
+    academic_year: '3rd Year',
+    bio: 'Cybersecurity geek wanting to form a CTF hackathon team',
+    skills: ['Linux', 'Wireshark', 'Python', 'Bash', 'Network Security'],
+    interests: ['Information Security', 'Threat Intelligence'],
+    availability_status: 'Available soon',
+    experience_level: 'Intermediate',
+    completed_projects: 3,
+    preferred_role: 'Security Specialist / Strategist',
+    experience: 'IT Support Specialist (Campus Helpdesk)',
+    certifications: ['CompTIA Security+', 'Cisco CCNA'],
+    achievements: ['Capture The Flag (CTF) National Finalist 2025'],
+  }),
+  base({
+    id: 'sample-S004',
+    full_name: 'Rishabh Nagvekar',
+    department: 'Artificial Intelligence',
+    academic_year: '2nd Year',
+    bio: 'Passionate about generative AI and collaborative coding projects',
+    skills: ['Python', 'TensorFlow', 'PyTorch', 'NLTK', 'OpenCV'],
+    interests: ['Natural Language Processing', 'Generative AI', 'Robotics'],
+    availability_status: 'Open to collaborate',
+    experience_level: 'Intermediate',
+    completed_projects: 1,
+    preferred_role: 'AI Engineer / Prompt Architect',
+    experience: 'AI Research Assistant (University Lab)',
+    certifications: ['Deep Learning Specialization (Coursera)'],
+    achievements: ['Best Innovation Award at AI Hackfest'],
+  }),
+  base({
+    id: 'sample-S005',
+    full_name: 'Krishay G',
+    department: 'Electronics and Communication',
+    academic_year: '3rd Year',
+    bio: 'Embedded systems builder looking for robotics and IoT project partners',
+    skills: ['C', 'C++', 'Arduino', 'RTOS', 'Verilog', 'PCB Design'],
+    interests: ['IoT', 'Robotics', 'Edge AI', 'Hardware prototyping'],
+    availability_status: 'Open to collaborate',
+    experience_level: 'Advanced',
+    completed_projects: 4,
+    preferred_role: 'Hardware Architect / Firmware Dev',
+    experience: 'Hardware Intern at MicroSystems (6 mos)',
+    certifications: ['ARM Accredited Engineer'],
+    achievements: ['Robotics Club President, 1st Place Smart India Hackathon'],
+  }),
+  base({
+    id: 'sample-S006',
+    full_name: 'Nishita Lumini',
+    department: 'Computer Science',
+    academic_year: '2nd Year',
+    bio: 'UI/UX Designer looking to collaborate on hackathons and startup MVPs',
+    skills: ['Figma', 'HTML/CSS', 'JavaScript', 'React', 'Tailwind CSS'],
+    interests: ['Human-Computer Interaction', 'Design Systems', 'App Design'],
+    availability_status: 'Available soon',
+    experience_level: 'Intermediate',
+    completed_projects: 1,
+    preferred_role: 'UI/UX Designer / Frontend Dev',
+    experience: 'Freelance UI/UX Designer (1 year)',
+    certifications: ['Google UX Design Professional Certificate'],
+    achievements: ['Design Hackathon Winner 2024'],
+  }),
+  base({
+    id: 'sample-S007',
+    full_name: 'Ram Sen',
+    department: 'Data Science',
+    academic_year: '3rd Year',
+    bio: 'Big data wizard seeking research groups in scalable analytics',
+    skills: ['Python', 'Spark', 'Hadoop', 'SQL', 'Airflow', 'Docker'],
+    interests: ['Data Engineering', 'Distributed Computing', 'ETL Pipelines'],
+    availability_status: 'Open to collaborate',
+    experience_level: 'Advanced',
+    completed_projects: 2,
+    preferred_role: 'Data Architect / Pipeline Engineer',
+    experience: 'Data Engineering Intern at DataScale (4 mos)',
+    certifications: ['Databricks Certified Associate Developer'],
+    achievements: ['ACM ICPC Regional Finalist'],
+  }),
+  base({
+    id: 'sample-S008',
+    full_name: 'Priya Joshi',
+    department: 'Information Technology',
+    academic_year: '1st Year',
+    bio: 'Cloud & DevOps enthusiast wanting to build infrastructure for college tech clubs',
+    skills: ['Docker', 'Kubernetes', 'AWS', 'Terraform', 'Linux'],
+    interests: ['DevOps', 'Infrastructure as Code', 'Cloud Architecture'],
+    availability_status: 'Open to collaborate',
+    experience_level: 'Beginner',
+    completed_projects: 0,
+    preferred_role: 'DevOps / Systems Lead',
+    experience: 'IT Club Technical Lead',
+    certifications: ['AWS Certified Cloud Practitioner'],
+    achievements: ['Winner of Cloud Innovate Challenge'],
+  }),
+  base({
+    id: 'sample-S009',
+    full_name: 'Arjun Das',
+    department: 'Computer Science',
+    academic_year: '2nd Year',
+    bio: 'Mobile app creator looking for teammates for upcoming app-building hackathons',
+    skills: ['Flutter', 'Dart', 'Kotlin', 'Firebase', 'REST APIs'],
+    interests: ['Cross-platform Apps', 'Mobile UI', 'AR/VR'],
+    availability_status: 'Available soon',
+    experience_level: 'Intermediate',
+    completed_projects: 1,
+    preferred_role: 'Mobile App Lead',
+    experience: 'App Developer for Student Startup',
+    certifications: ['Flutter & Dart Certification'],
+    achievements: ['App of the Month Award (Campus Tech Week)'],
+  }),
+  base({
+    id: 'sample-S010',
+    full_name: 'Tanvi Kulkarni',
+    department: 'Artificial Intelligence',
+    academic_year: '4th Year',
+    bio: 'Computer vision researcher looking for academic project collaborators',
+    skills: ['Python', 'OpenCV', 'PyTorch', 'C++', 'TensorRT'],
+    interests: ['Computer Vision', 'Deep Learning', 'Edge Computing'],
+    availability_status: 'Not available',
+    experience_level: 'Advanced',
+    completed_projects: 4,
+    preferred_role: 'Lead Researcher',
+    experience: 'CV Research Intern (AI Research Center)',
+    certifications: ['NVIDIA Deep Learning Institute Certificate'],
+    achievements: ['Published paper at IEEE Student Conference'],
+  }),
+];
+
+export const SAMPLE_STUDENTS_BY_ID = Object.fromEntries(SAMPLE_STUDENTS.map((s) => [s.id, s]));
+export const SAMPLE_STUDENTS_BY_NAME = Object.fromEntries(SAMPLE_STUDENTS.map((s) => [s.full_name.toLowerCase(), s]));
