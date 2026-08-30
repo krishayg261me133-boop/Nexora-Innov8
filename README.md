@@ -90,8 +90,7 @@ NEXORA addresses this challenge by providing a single ecosystem where students c
 
 ## 🏗️ System Architecture
 
-```
-```
+```text
 Students
     │
     ▼
@@ -115,8 +114,8 @@ PostgreSQL Database
 └── User Data
     │
     ▼
-Deployment
-(Vercel)
+Deployment (Vercel)
+```
 ```
 ```
 
