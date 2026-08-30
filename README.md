@@ -1,8 +1,5 @@
 Title: “Nexora: the next generation of Student Collaboration”
 
-Project Type: 
-Hackathon
-
 Description: 
 NEXORA is a Student Talent & Team Formation Network that helps students discover teammates, opportunities, and build teams for hackathons, projects, and research — using smart, skill-based matching instead of scattered WhatsApp groups and word-of-mouth.
 
